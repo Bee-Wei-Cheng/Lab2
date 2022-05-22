@@ -5,17 +5,19 @@ def get_user_input():
     list = []
     str=input("Enter value")
     list=str.split(",")
-    list=[int(i) for i in list]
+    list=[float(i) for i in list]
     return list
 
 def calc_average_temperature(list):
     calc_average_temperature=sum(list)/len(list)
     return calc_average_temperature
 
+
 def calc_min_max_temperature(list):
     value = []
     value.append(min(list))
     value.append(max(list))
+    value=[int(i) for i in value]
     return value
 
 def main():
